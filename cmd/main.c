@@ -148,6 +148,7 @@ int main(int argc, char **argv)
         } else {
             fprintf(stderr, "could not inject \"%s\"\n", libname);
             fprintf(stderr, "  %s\n", injector_error());
+            return 1;
         }
     }
     injector_detach(injector);
